@@ -1,0 +1,21 @@
+[
+
+  {
+    "title": "CSS",
+    "content": "How do you use CSS?",
+    "user_id": 1
+
+},
+  {
+    "title": "Javascript",
+    "content": "Can Javascript do this?",
+    "user_id": 1
+
+},
+  {
+    "title": "Offtopic-QLED or OLED",
+    "content": "What is best for 4K?",
+    "user_id": 1
+
+}
+]
