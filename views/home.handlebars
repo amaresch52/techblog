@@ -1,0 +1,31 @@
+<div class='container' id='blogPosts'>
+  <div class='col-md-12 text-center' id='homeTitle'>
+    <h2 id='homeHeader'>
+      Latest Blogs
+    </h2>
+  </div>
+  {{#each blogs}}
+    <a href='/blog/{{this.id}}'>
+      <div class='card'>
+        {{! run each statement here up to 4 posts }}
+        <div class='card-body'>
+          <h3 class='card-title'>
+            {{this.title}}
+            <br />
+            <h4>
+              By:
+              {{this.author}}
+              on
+              {{format_date this.date}}
+            </h4>
+          </h3>
+          <br />
+          <p class='card-text'>
+            {{blog_preview this.body}}
+          </p>
+        </div>
+      </div>
+    </a>
+  {{/each}}
+  {{! end of each statement here  }}
+</div>

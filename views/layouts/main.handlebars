@@ -1,46 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-
+  
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MVC Tech Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Tech Blog</title>
+  <link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+			integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+			crossorigin="anonymous"
+		/>
+  <link rel="stylesheet" href="/css/reset.css">
   <link rel="stylesheet" href="/css/style.css">
-  
 </head>
 
 <body>
-  <div class="wrapper">
-      <header class="hero">
-          <div>
-          <nav class"nav">
-              <a class="link" href="/">Home</a>
-              <a class="link" href="/dashboard">Dashboard</a>
-              {{#if loggedIn}}
-              <a class="link" href="/" id="logout">Logout</a>
-              {{else}}
-              <a class="link" href="/login">Login</a>
-              {{/if}}
-          </nav>          
-          </div>
-
-          <h1 class="app-title"><i class="fab"></i>The Tech Blog</h1>
-      </header>
-
-    <main>
-      {{{ body }}}
-    </main>
+  <div class="container-fluid">
+    <header class="row">
+      <h1 class="col-md-2">
+        Tech Blog
+      </h1>
+      <h2 class="col-2"><i class="fas fa-folder"></i><a href="/">Home</a></h2>
+      <h2 class="col-2"><i class="fas fa-folder"></i><a href="/dashboard">Dashboard</a></h2>
+      {{#unless loggedIn}}
+      <h2 class="col-2"><i class="fas fa-folder"></i><a href="/login">Login</a></h2>
+      {{/unless}}
+      {{#if loggedIn}}
+      <h2 class="col-2"><i class="fas fa-folder"></i><a href="/login/logout" class="logout">Logout</a></h2>
+      <h2 class="col-2"><i class="fas fa-plus-square"></i><a href="/blog" class="newPost">New Blog Post</a></h2>
+      {{/if}}
+    </header>
   </div>
-
-  {{#if loggedIn}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
-
-<script
-			src='https://code.jquery.com/jquery-3.3.1.slim.min.js'
-			integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo'
-			crossorigin='anonymous'
-		></script>
-
+        {{{ body }}}
 </body>
+
 </html>
+
+<script src="/js/logout.js"></script>
