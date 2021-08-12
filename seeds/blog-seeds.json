@@ -4,20 +4,22 @@
     "body": "How do you use CSS?",
     "author": "Sal",
     "date": "06/18/2021",
-    "user_id": 
+    "user_id": 1
   },
+
   {
     "title": "Javascript",
     "body": "Can Javascript do this?",
     "author": "Amiko",
     "date": "06/19/2021",
-    "user_id": 
+    "user_id": 2
   },
+
   {
     "title": "Offtopic-QLED or OLED",
     "body": "What is best for 4K?",
     "author": "Lernantino",
     "date": "06/21/2021",
-    "user_id": 
+    "user_id": 1
   }
 ]
